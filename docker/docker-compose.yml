@@ -1,0 +1,36 @@
+services:
+  mongodb:
+    image: mongo:7-jammy
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - backend
+    restart: always
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    env_file:
+      - ../.env
+    environment:
+      # Use the docker network hostname (not localhost)
+      MONGODB_URL: mongodb://mongodb:27017
+      UPLOAD_DIR: /app/uploads
+    volumes:
+      - ../uploads:/app/uploads
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+    networks:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:
+
+networks:
+  backend:

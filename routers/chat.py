@@ -96,12 +96,7 @@ async def chat(session_id: str, body: ChatRequest, request: Request):
     await sessions_model.touch(session_id, updated_at=now)
 
     return ChatResponse(
-        session_id=session_id,
         answer=answer,
-        code=code,
-        output=output,
-        chart=chart_b64,
-        message_id=message_id,
     )
 
 

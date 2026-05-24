@@ -1,21 +1,3 @@
-"""
-LangGraph – CSV Data Science Agent
-
-  __start__
-      ↓
-  inspect_csv        (loads CSV, builds metadata string)
-      ↓
-  analyze_data       (LLM reads metadata + question, plans approach)
-      ↓
-  code_gen           (LLM writes pandas/chart code)
-      ↓  ← conditional edge
-  ┌── __end__        if LLM gave plain-text final answer (no code block)
-  └── correct_code   if LLM produced a ```python block
-          ↓
-      execute_code   (runs code safely, captures output + chart PNG)
-          ↓ (loops back)
-      code_gen
-"""
 from langchain_core.messages import AIMessage
 from langgraph.graph import StateGraph, END
 

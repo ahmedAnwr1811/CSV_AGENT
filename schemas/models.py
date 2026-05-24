@@ -34,13 +34,7 @@ class ChatRequest(BaseModel):
     query: str = Field(..., min_length=1, description="Plain-English question about the CSV")
 
 class ChatResponse(BaseModel):
-    session_id: str
     answer: str                    # LLM final text answer
-    code: str | None = None        # generated Python code
-    output: str | None = None      # stdout from execution
-    chart: str | None = None       # base64 PNG (render in <img src="data:image/png;base64,...">)
-    message_id: str
-
 
 # ── History ────────────────────────────────────────────────────────────────
 

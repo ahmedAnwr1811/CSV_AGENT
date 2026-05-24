@@ -1,9 +1,3 @@
-"""
-Node 5 – execute_code
-Runs the generated pandas/matplotlib code in the safe sandbox.
-  - On success → stores output + chart, clears error, adds result to messages
-  - On failure → stores error so correct_code can fix it, loops back
-"""
 from langchain_core.messages import HumanMessage
 from helpers.code_runner import run_code
 from agents.state import AgentState

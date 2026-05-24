@@ -1,12 +1,3 @@
-"""
-Node 2 – analyze_data (LLM node)
-The LLM reads the CSV metadata and the user question,
-then writes a plain-English analysis plan:
-  - which columns are relevant
-  - what kind of answer is expected (number, chart, table…)
-  - any data-cleaning concerns
-This plan is stored in messages so code_gen can use it.
-"""
 from langchain_core.messages import SystemMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from agents.state import AgentState

@@ -1,11 +1,3 @@
-"""
-Node 1 – inspect_csv
-Loads the CSV and builds a concise metadata string:
-  - shape (rows × cols)
-  - column names + dtypes
-  - first 5 rows as a readable preview
-This gives the LLM everything it needs to understand the data.
-"""
 import pandas as pd
 from agents.state import AgentState
 from agents.node_outputs import InspectCSVOutput

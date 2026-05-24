@@ -1,16 +1,3 @@
-"""
-Node 3 – code_gen  (decision hub)
-LLM writes runnable pandas / matplotlib / seaborn code.
-Rules it must follow (injected in system prompt):
-- The dataframe is always available as `df` (already loaded)
-- Use print() for text results
-- Use plt.show() if creating a chart (the runner captures it)
-- Never import os, subprocess, or open files
-
-Conditional edge logic (in graph.py):
-- If the response contains a ```python block → route to correct_code
-- If it is a plain-text final answer   → route to __end__
-"""
 from langchain_core.messages import SystemMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from agents.state import AgentState

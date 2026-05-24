@@ -1,9 +1,3 @@
-"""
-Node 4 – correct_code
-If execute_code returned an error, this node asks the LLM to fix the code.
-If there was no error it passes through unchanged (no LLM call).
-"""
-
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from agents.state import AgentState

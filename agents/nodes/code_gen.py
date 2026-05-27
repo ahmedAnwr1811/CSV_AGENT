@@ -1,8 +1,8 @@
 from langchain_core.messages import SystemMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from agents.state import AgentState
-from agents.llm_outputs import CodeGenLLMOutput
-from agents.node_outputs import CodeGenOutput
+from schemas.llm_outputs import CodeGenLLMOutput
+from schemas.node_outputs import CodeGenOutput
 from agents.prompts import CODE_GEN_SYSTEM
 from helpers.config import get_settings
 

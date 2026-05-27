@@ -1,8 +1,8 @@
 from langchain_core.messages import SystemMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from agents.state import AgentState
-from agents.llm_outputs import AnalyzeDataLLMOutput
-from agents.node_outputs import AnalyzeDataOutput
+from schemas.llm_outputs import AnalyzeDataLLMOutput
+from schemas.node_outputs import AnalyzeDataOutput
 from agents.prompts import ANALYZE_DATA_SYSTEM
 from helpers.config import get_settings
 

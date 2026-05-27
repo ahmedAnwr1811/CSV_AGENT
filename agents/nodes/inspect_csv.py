@@ -1,6 +1,6 @@
 import pandas as pd
 from agents.state import AgentState
-from agents.node_outputs import InspectCSVOutput
+from schemas.node_outputs import InspectCSVOutput
 from helpers.config import get_settings
 
 settings = get_settings()

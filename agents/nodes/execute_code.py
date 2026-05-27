@@ -1,7 +1,7 @@
 from langchain_core.messages import HumanMessage
 from helpers.code_runner import run_code
 from agents.state import AgentState
-from agents.node_outputs import ExecuteCodeOutput
+from schemas.node_outputs import ExecuteCodeOutput
 
 
 def execute_code(state: AgentState) -> dict:

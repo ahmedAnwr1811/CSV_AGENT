@@ -1,8 +1,8 @@
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from agents.state import AgentState
-from agents.llm_outputs import CorrectCodeLLMOutput
-from agents.node_outputs import CorrectCodeOutput
+from schemas.llm_outputs import CorrectCodeLLMOutput
+from schemas.node_outputs import CorrectCodeOutput
 from helpers.config import get_settings
 
 settings = get_settings()

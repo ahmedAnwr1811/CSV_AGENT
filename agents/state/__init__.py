@@ -25,3 +25,6 @@ class AgentState(TypedDict):
     code_output: str | None       # stdout text
     chart_b64:   str | None       # base64 PNG (None if no chart)
     exec_error:  str | None       # traceback if execution failed
+
+
+__all__ = ["AgentState"]
